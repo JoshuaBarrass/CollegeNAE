@@ -95,6 +95,12 @@ namespace NEAapp.Forms_Windows
                 return;
             }
 
+            if (nameBox.Text == "" || nameBox.Text.Length < 5)
+            {
+                MessageBox.Show("Name Cannot Exist", "Invalid Name");
+                return;
+            }
+
             if ((DateTime.Now - DOBPicker.Value).TotalDays < 18 * 365)
             {
                 MessageBox.Show("You Cannot Be Less Than 18", "Invalid Age");
@@ -106,12 +112,109 @@ namespace NEAapp.Forms_Windows
                 MessageBox.Show("Email Cannot Exist", "Invalid Email");
                 return;
             }
+
+            if(ContactDetailsBox.Text == "" || ContactDetailsBox.Text.Length < 5)
+            {
+                MessageBox.Show("Contact Detials Cannot be Empty", "Invalid Contact Details");
+                return;
+            }
+            
+
+            if (EmergencyContactBox.Text == "" || EmergencyContactBox.Text.Length < 2)
+            {
+                MessageBox.Show("Emergency Contact Detials Cannot be Empty", "Invalid Emergency Contact Detials");
+                return;
+            }
             // Check Username is valid with above bool
+
+            if (!CanUseName)
+            {
+                MessageBox.Show("Username In Use", "Invalid Username");
+                return;
+            }
+
 
             // Add Login and Password to loginTable and add new staffData, 
             // find staff table id and set logintable id to be the same on both
+            //               INSERT INTO Customer (FirstName, LastName, City, Country, Phone)
+            //               VALUES('Craig', 'Smith', 'New York', 'USA', 1 - 01 - 993 2800)
+            var staffquery = "INSERT INTO StaffTable (StaffUsername, StaffName, [DOB], [WorkedSince], Email, contactDetails, EmergencyContact, MedicallyTrained ) " +
+                "VALUES(@username, @name, @Dob, @workedSince, @email, @contact, @emergency, @medical)";
+
+            OleDbConnection myConn = new OleDbConnection(Program.strDSN);       // Connects to database
+            OleDbCommand myComm = new OleDbCommand(staffquery, myConn);     // Takes in connection and query
+            myConn.Open();
+            myComm.Parameters.Add("@username", OleDbType.VarChar).Value = UsernameTextBox.Text;   // puts variables into query in place of @something
+            myComm.Parameters.Add("@name", OleDbType.VarChar).Value = nameBox.Text;
+            myComm.Parameters.Add("@Dob", OleDbType.Date).Value = DOBPicker.Value.Date;
+            myComm.Parameters.Add("@workedSince", OleDbType.Date).Value = DateTime.Now.Date;
+            myComm.Parameters.Add("@email", OleDbType.VarChar).Value = EmailBox.Text;
+            myComm.Parameters.Add("@contact", OleDbType.VarChar).Value = ContactDetailsBox.Text;
+            myComm.Parameters.Add("@emergency", OleDbType.VarChar).Value = EmergencyContactBox.Text;
+            myComm.Parameters.Add("@medical", OleDbType.Boolean).Value = MedicalCheckBox.Checked;
+
+            if (myComm.ExecuteNonQuery() == 0)
+            {
+                MessageBox.Show("Account Not Saved", "Query Issue");
+                return;
+            }
+            else 
+            {
+                MessageBox.Show("Account Saved", "Query Fine");
+            }
+            myConn.Close();
+
+
+
+            var getIdQuery = "SELECT Id FROM StaffTable WHERE StaffUsername = @username";
+            OleDbConnection myConn2 = new OleDbConnection(Program.strDSN);       // Connects to database
+            OleDbCommand myComm2 = new OleDbCommand(getIdQuery, myConn2);     // Takes in connection and query
+            myComm2.Parameters.Add("@username", OleDbType.VarChar).Value = UsernameTextBox.Text;
+
+            int id = 0;
+
+            myConn2.Open();
+            using (OleDbDataReader r = myComm2.ExecuteReader()) // Best way i could Find to do it so i can check a Login Exists
+            {
+                if (r.HasRows)    // Opens a reader for the sql query and checks if we got Rows aka. if anything was returned
+                {
+                    r.Read();
+                    id = r.GetInt32(0);     // Reads found Line with the ID of the Account
+
+                    //MessageBox.Show($"Found ID {id} for account {inputUsername}", "Correct Login");   //Message box for testing 
+                }
+                else
+                {
+                    MessageBox.Show("unknown Error", "SQL ERROR");
+                    return;
+                }
+            }
+            myConn2.Close();         // close connection
+
+            var stdQuery = "INSERT INTO LoginTable ([Username], [Password], [LinkingID]) " +
+                "VALUES(?, ?, ?)";
+            //             "INSERT INTO StaffTable (StaffUsername, StaffName, [DOB]) VALUES(@username, @name, @Dob)";
+            OleDbConnection myConn3 = new OleDbConnection(Program.strDSN);       // Connects to database
+            OleDbCommand myComm3 = new OleDbCommand(stdQuery, myConn3);     // Takes in connection and query
+            myComm3.Parameters.Add("?", OleDbType.VarChar).Value = UsernameTextBox.Text;
+            myComm3.Parameters.Add("?", OleDbType.VarChar).Value = passwordTextBox.Text;
+            myComm3.Parameters.Add("?", OleDbType.Integer).Value = id;
+
+            myConn3.Open();
+            if(myComm3.ExecuteNonQuery() != 0)
+            {
+                MessageBox.Show($"Login Successfully Saved at id {id.ToString()}", "Login Added");
+
+            }
+            else
+            {
+                MessageBox.Show("unknown Error", "SQL ERROR");
+                return;
+            }
+            myConn3.Close();
 
             //Once created all that go back to the main login Screen
+            this.Close();
 
         }
 

@@ -46,8 +46,10 @@
             this.TimerLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.EmergencyContactBox = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.nameBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(12, 415);
+            this.LoginButton.Location = new System.Drawing.Point(11, 460);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(92, 23);
             this.LoginButton.TabIndex = 12;
@@ -113,7 +115,7 @@
             // 
             // DOBPicker
             // 
-            this.DOBPicker.Location = new System.Drawing.Point(11, 108);
+            this.DOBPicker.Location = new System.Drawing.Point(11, 151);
             this.DOBPicker.Name = "DOBPicker";
             this.DOBPicker.Size = new System.Drawing.Size(206, 20);
             this.DOBPicker.TabIndex = 16;
@@ -121,7 +123,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 93);
+            this.label2.Location = new System.Drawing.Point(9, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 17;
@@ -129,7 +131,7 @@
             // 
             // ContactDetailsBox
             // 
-            this.ContactDetailsBox.Location = new System.Drawing.Point(11, 172);
+            this.ContactDetailsBox.Location = new System.Drawing.Point(11, 220);
             this.ContactDetailsBox.Name = "ContactDetailsBox";
             this.ContactDetailsBox.Size = new System.Drawing.Size(206, 96);
             this.ContactDetailsBox.TabIndex = 18;
@@ -138,7 +140,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 155);
+            this.label3.Location = new System.Drawing.Point(9, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 19;
@@ -146,7 +148,7 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(11, 133);
+            this.EmailBox.Location = new System.Drawing.Point(11, 176);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(206, 20);
             this.EmailBox.TabIndex = 20;
@@ -155,7 +157,7 @@
             // MedicalCheckBox
             // 
             this.MedicalCheckBox.AutoSize = true;
-            this.MedicalCheckBox.Location = new System.Drawing.Point(12, 395);
+            this.MedicalCheckBox.Location = new System.Drawing.Point(12, 437);
             this.MedicalCheckBox.Name = "MedicalCheckBox";
             this.MedicalCheckBox.Size = new System.Drawing.Size(120, 17);
             this.MedicalCheckBox.TabIndex = 21;
@@ -169,7 +171,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(335, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(453, 418);
+            this.groupBox1.Size = new System.Drawing.Size(453, 466);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information Box";
@@ -177,7 +179,7 @@
             // TimerLabel
             // 
             this.TimerLabel.AutoSize = true;
-            this.TimerLabel.Location = new System.Drawing.Point(6, 395);
+            this.TimerLabel.Location = new System.Drawing.Point(6, 450);
             this.TimerLabel.Name = "TimerLabel";
             this.TimerLabel.Size = new System.Drawing.Size(30, 13);
             this.TimerLabel.TabIndex = 7;
@@ -196,19 +198,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 272);
+            this.label4.Location = new System.Drawing.Point(9, 319);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 13);
             this.label4.TabIndex = 24;
             this.label4.Text = "Emergency Contact";
             // 
-            // richTextBox1
+            // EmergencyContactBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(11, 288);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(206, 96);
-            this.richTextBox1.TabIndex = 23;
-            this.richTextBox1.Text = "";
+            this.EmergencyContactBox.Location = new System.Drawing.Point(11, 335);
+            this.EmergencyContactBox.Name = "EmergencyContactBox";
+            this.EmergencyContactBox.Size = new System.Drawing.Size(206, 96);
+            this.EmergencyContactBox.TabIndex = 23;
+            this.EmergencyContactBox.Text = "";
             // 
             // timer1
             // 
@@ -216,13 +218,31 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // nameBox
+            // 
+            this.nameBox.Location = new System.Drawing.Point(12, 113);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(206, 20);
+            this.nameBox.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 97);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Full Name";
+            // 
             // Create_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 498);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.nameBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.EmergencyContactBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.MedicalCheckBox);
             this.Controls.Add(this.EmailBox);
@@ -264,7 +284,9 @@
         private System.Windows.Forms.Label TimerLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox EmergencyContactBox;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -10,3 +10,15 @@ E:\College Work\Computer science\year 2\NEA\NEAapp\obj\Debug\NEAapp.pdb
 E:\College Work\Computer science\year 2\NEA\NEAapp\obj\Debug\NEAapp.LoginScreen.resources
 E:\College Work\Computer science\year 2\NEA\NEAapp\obj\Debug\NEAapp.Forms_Windows.Create_Account.resources
 E:\College Work\Computer science\year 2\NEA\NEAapp\obj\Debug\NEAapp.Forms_Windows.MainMenu.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\bin\Debug\NEAapp.exe.config
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\bin\Debug\NEAapp.exe
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\bin\Debug\NEAapp.pdb
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.csprojAssemblyReference.cache
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.Create_Account.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.LoginScreen.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.MainMenu.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Properties.Resources.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.csproj.GenerateResource.cache
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.csproj.CoreCompileInputs.cache
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.exe
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.pdb

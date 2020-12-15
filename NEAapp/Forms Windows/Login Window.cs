@@ -31,8 +31,13 @@ namespace NEAapp
 
         private void label3_Click(object sender, EventArgs e)
         {
-            ProcessStartInfo sInfo = new ProcessStartInfo("https://github.com/JoshuaBarrass/");
-            Process.Start(sInfo);
+            
+            var result = MessageBox.Show("Open Github?", "Github", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+            {
+                ProcessStartInfo sInfo = new ProcessStartInfo("https://github.com/JoshuaBarrass/");
+                Process.Start(sInfo);
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -59,12 +64,11 @@ namespace NEAapp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string strDSN = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source = E:\College Work\Computer science\year 2\NEA\NEAapp\Database\ProjectDatabase1.accdb");
             var inputUsername = UsernameTextBox.Text;
             var inputPassword = passwordTextBox.Text;
             string strQRY = ($"SELECT Id from LoginTable WHERE Username=@username AND Password=@password");   // Our query
 
-            OleDbConnection myConn = new OleDbConnection(strDSN);       // Connects to database
+            OleDbConnection myConn = new OleDbConnection(Program.strDSN);       // Connects to database
             OleDbCommand myComm = new OleDbCommand(strQRY, myConn);     // Takes in connection and query
             myComm.Parameters.AddWithValue("@username", inputUsername);   // puts variables into query in place of @something
             myComm.Parameters.AddWithValue("@password", inputPassword);
