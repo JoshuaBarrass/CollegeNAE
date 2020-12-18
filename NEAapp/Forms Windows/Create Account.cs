@@ -138,8 +138,8 @@ namespace NEAapp.Forms_Windows
             // find staff table id and set logintable id to be the same on both
             //               INSERT INTO Customer (FirstName, LastName, City, Country, Phone)
             //               VALUES('Craig', 'Smith', 'New York', 'USA', 1 - 01 - 993 2800)
-            var staffquery = "INSERT INTO StaffTable (StaffUsername, StaffName, [DOB], [WorkedSince], Email, contactDetails, EmergencyContact, MedicallyTrained ) " +
-                "VALUES(@username, @name, @Dob, @workedSince, @email, @contact, @emergency, @medical)";
+            var staffquery = "INSERT INTO StaffTable (StaffUsername, StaffName, [DOB], [WorkedSince], AquiredRoles, Email, contactDetails, EmergencyContact, MedicallyTrained ) " +
+                "VALUES(@username, @name, @Dob, @workedSince, @roles, @email, @contact, @emergency, @medical)";
 
             OleDbConnection myConn = new OleDbConnection(Program.strDSN);       // Connects to database
             OleDbCommand myComm = new OleDbCommand(staffquery, myConn);     // Takes in connection and query
@@ -148,6 +148,7 @@ namespace NEAapp.Forms_Windows
             myComm.Parameters.Add("@name", OleDbType.VarChar).Value = nameBox.Text;
             myComm.Parameters.Add("@Dob", OleDbType.Date).Value = DOBPicker.Value.Date;
             myComm.Parameters.Add("@workedSince", OleDbType.Date).Value = DateTime.Now.Date;
+            myComm.Parameters.Add("@roles", OleDbType.VarChar).Value = "1";
             myComm.Parameters.Add("@email", OleDbType.VarChar).Value = EmailBox.Text;
             myComm.Parameters.Add("@contact", OleDbType.VarChar).Value = ContactDetailsBox.Text;
             myComm.Parameters.Add("@emergency", OleDbType.VarChar).Value = EmergencyContactBox.Text;
@@ -226,6 +227,11 @@ namespace NEAapp.Forms_Windows
         private void passwordTextBox_TextChanged(object sender, EventArgs e)
         {
             ShowPassword();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

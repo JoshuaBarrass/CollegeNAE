@@ -66,7 +66,7 @@ namespace NEAapp
         {
             var inputUsername = UsernameTextBox.Text;
             var inputPassword = passwordTextBox.Text;
-            string strQRY = ($"SELECT Id from LoginTable WHERE Username=@username AND Password=@password");   // Our query
+            string strQRY = ($"SELECT LinkingID from LoginTable WHERE Username=@username AND Password=@password");   // Our query
 
             OleDbConnection myConn = new OleDbConnection(Program.strDSN);       // Connects to database
             OleDbCommand myComm = new OleDbCommand(strQRY, myConn);     // Takes in connection and query
@@ -85,6 +85,12 @@ namespace NEAapp
                     id = r.GetInt32(0);     // Reads found Line with the ID of the Account
 
                     MessageBox.Show($"Found ID {id} for account {inputUsername}", "Correct Login");   //Message box for testing 
+
+                    Forms_Windows.MainMenu main = new Forms_Windows.MainMenu(id);
+                    main.Closed += (s, args) => this.Close(); // When you close the new window, this one opens back up
+                    main.Show();
+                    this.Hide();
+
                 }
                 else
                     userExists = false; // else no user found 
@@ -127,6 +133,11 @@ namespace NEAapp
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

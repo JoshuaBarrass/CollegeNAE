@@ -135,7 +135,7 @@
             this.ContactDetailsBox.Name = "ContactDetailsBox";
             this.ContactDetailsBox.Size = new System.Drawing.Size(206, 96);
             this.ContactDetailsBox.TabIndex = 18;
-            this.ContactDetailsBox.Text = "";
+            this.ContactDetailsBox.Text = "Phone Number:\nAddress:\nPostcode:\nExtra Information:\n";
             // 
             // label3
             // 
@@ -175,6 +175,7 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information Box";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // TimerLabel
             // 
@@ -210,7 +211,7 @@
             this.EmergencyContactBox.Name = "EmergencyContactBox";
             this.EmergencyContactBox.Size = new System.Drawing.Size(206, 96);
             this.EmergencyContactBox.TabIndex = 23;
-            this.EmergencyContactBox.Text = "";
+            this.EmergencyContactBox.Text = "Name: \nPhone Number:\nRelationship:";
             // 
             // timer1
             // 

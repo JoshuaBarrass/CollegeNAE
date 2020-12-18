@@ -29,7 +29,7 @@ namespace NEAapp
 
         // Initilising Object
         public StaffProfile(string Name, DateTime DOB, DateTime workedSince, bool admin, string contract,
-            double acceptedWage, string email, string contactDetails, string emergencycontact, bool medical, Roles[] givenRoles = null)
+            double acceptedWage, string email, string contactDetails, string emergencycontact, bool medical, List<int> givenRoles = null)
         {
 
             this.Name = Name;
@@ -46,10 +46,20 @@ namespace NEAapp
             this.Contract = contract;
 
             if (givenRoles != null)
-                foreach (var role in givenRoles)
+            {
+
+                var SortedRoles = new List<Roles>();
+
+                foreach (var item in givenRoles)
+                {
+                    SortedRoles.Add(new Roles(IntToRole(int.Parse(item.ToString())))); //Change numbers to roleTypes
+                }
+
+                foreach (var role in SortedRoles)
                 {
                     this.aquiredRoles.Add(role);
-                };
+                }
+            }
 
             if (this.isAdmin && !this.aquiredRoles.Contains(new Roles(roleTypes.ADMIN, 1)))
             {
@@ -64,7 +74,7 @@ namespace NEAapp
         }
 
         public void InitProfile(string Name, DateTime DOB, DateTime workedSince, bool admin, string contract,
-            double acceptedWage, string email, string contactDetails, string emergencycontact, bool medical, Roles[] givenRoles = null)
+            double acceptedWage, string email, string contactDetails, string emergencycontact, bool medical, List<int> givenRoles = null)
         {
             this.Name = Name;
             this.DOB = DOB;
@@ -79,11 +89,23 @@ namespace NEAapp
             this.isAdmin = admin;
             this.Contract = contract;
 
+
+
             if (givenRoles != null)
-                foreach (var role in givenRoles)
+            {
+
+                var SortedRoles = new List<Roles>();
+
+                foreach (var item in givenRoles)
+                {
+                    SortedRoles.Add(new Roles(IntToRole(int.Parse(item.ToString())))); //Change numbers to roleTypes
+                }
+
+                foreach (var role in SortedRoles)
                 {
                     this.aquiredRoles.Add(role);
-                };
+                }
+            }
 
             if (this.isAdmin && !this.aquiredRoles.Contains(new Roles(roleTypes.ADMIN, 1)))
             {
@@ -313,6 +335,47 @@ namespace NEAapp
         public void addHoursWorked(double Hours)
         {
             this.hoursWorkedInLastWeek += Hours;
+        }
+
+
+        public roleTypes IntToRole(int enumNumber)
+        {
+            switch (enumNumber)
+            {
+                case 0:
+                    return roleTypes.GENERALSTAFF;
+                    break;
+                case 1:
+                    return roleTypes.ENGINEER;
+                    break;
+                case 2:
+                    return roleTypes.ACCOUNTANT;
+                    break;
+                case 3:
+                    return roleTypes.MANAGER;
+                    break;
+                case 4:
+                    return roleTypes.SUPERVISOR;
+                    break;
+                case 5:
+                    return roleTypes.NOTICEBOARDACCESS;
+                    break;
+                case 6:
+                    return roleTypes.INVOICEACCESS;
+                    break;
+                case 7:
+                    return roleTypes.PROJECTSACCESS;
+                    break;
+                case 8:
+                    return roleTypes.QUERYACCESS;
+                    break;
+                case 9:
+                    return roleTypes.ADMIN;
+                default:
+                    return roleTypes.GENERALSTAFF;
+                    break;
+
+            }
         }
 
     }

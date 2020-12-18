@@ -22,3 +22,10 @@ E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.c
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.csproj.CoreCompileInputs.cache
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.exe
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.pdb
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.UserControls.NoticeBoardItem.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\bin\Debug\zxing.dll
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\bin\Debug\zxing.presentation.dll
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\bin\Debug\zxing.xml
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\bin\Debug\zxing.presentation.xml
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.csproj.CopyComplete
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.addNotice.resources

@@ -22,6 +22,8 @@ namespace NEAapp.Classes
 
     }
 
+
+
     class Roles
     {
         private roleTypes role;
@@ -47,6 +49,7 @@ namespace NEAapp.Classes
         {
             return this.roleLevel;
         }
+
 
     }
 }
