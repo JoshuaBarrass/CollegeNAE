@@ -85,7 +85,7 @@ namespace NEAapp
                     id = r.GetInt32(0);     // Reads found Line with the ID of the Account
 
                     MessageBox.Show($"Found ID {id} for account {inputUsername}", "Correct Login");   //Message box for testing 
-
+                    LogEvent.LogStaffLogin(id, inputUsername);
                     Forms_Windows.MainMenu main = new Forms_Windows.MainMenu(id);
                     main.Closed += (s, args) => this.Close(); // When you close the new window, this one opens back up
                     main.Show();

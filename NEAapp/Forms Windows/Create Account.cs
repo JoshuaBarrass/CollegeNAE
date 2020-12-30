@@ -205,7 +205,7 @@ namespace NEAapp.Forms_Windows
             if(myComm3.ExecuteNonQuery() != 0)
             {
                 MessageBox.Show($"Login Successfully Saved at id {id.ToString()}", "Login Added");
-
+                LogEvent.LogStaffCreateAccount(id, UsernameTextBox.Text);
             }
             else
             {

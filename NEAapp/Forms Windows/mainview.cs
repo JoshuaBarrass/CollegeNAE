@@ -170,12 +170,24 @@ namespace NEAapp.Forms_Windows
 
             myConn.Close();         // close connection
 
-            for (int i = 1; i < TrueNoticePanel.Controls.Count; i++)
+            for (int i = 0; i < TrueNoticePanel.Controls.Count; i++)
             {
                 TrueNoticePanel.Controls[i].Top += (120 * i);
             }
 
-            TrueNoticePanel.AutoScrollMargin = new System.Drawing.Size(10, 60 * TrueNoticePanel.Controls.Count);
+            TrueNoticePanel.AutoScrollMargin = new System.Drawing.Size(0, TrueNoticePanel.Controls.Count);
+            panel5.Width = TrueNoticePanel.Controls[0].Width + TrueNoticePanel.AutoScrollMargin.Width;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Customer testCustomer = new Customer("Nax", "NAX", "Josh - 07437758799", "None", "joshuabarrass010203@gmail.com");
+            testCustomer.bumpEmailUnpaidInvoices();
         }
     }
 }

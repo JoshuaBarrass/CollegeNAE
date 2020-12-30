@@ -67,7 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Billing.cs" />
+    <Compile Include="Classes\Computer.cs" />
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Project.cs" />
     <Compile Include="Classes\Roles.cs" />
+    <Compile Include="Classes\Site.cs" />
     <Compile Include="Forms Windows\Create Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +97,7 @@
     <Compile Include="Forms Windows\mainview.Designer.cs">
       <DependentUpon>mainview.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seperate Scripts\LogEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\StaffProfile.cs" />

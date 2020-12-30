@@ -31,5 +31,10 @@ namespace NEAapp.UserControls
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Opens box to respond to id of account that made the post
+        }
     }
 }
