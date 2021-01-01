@@ -216,6 +216,7 @@
             this.button10.TabIndex = 7;
             this.button10.Text = "Staff Logs";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button7
             // 
@@ -293,6 +294,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(384, 777);
             this.panel7.TabIndex = 3;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // panel4
             // 

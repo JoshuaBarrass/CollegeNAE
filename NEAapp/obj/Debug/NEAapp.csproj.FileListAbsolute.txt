@@ -29,3 +29,5 @@ E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\bin\Debug\zxing.xm
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\bin\Debug\zxing.presentation.xml
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.csproj.CopyComplete
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.addNotice.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.logMenu.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.UserControls.Logitem.resources

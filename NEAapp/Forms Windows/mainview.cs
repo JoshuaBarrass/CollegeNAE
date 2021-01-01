@@ -189,5 +189,25 @@ namespace NEAapp.Forms_Windows
             Customer testCustomer = new Customer("Nax", "NAX", "Josh - 07437758799", "None", "joshuabarrass010203@gmail.com");
             testCustomer.bumpEmailUnpaidInvoices();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (Program.globalCurrentUser.checkAdmin() || Program.globalCurrentUser.checkRole(roleTypes.SUPERVISOR))
+            {
+                Forms_Windows.logMenu logmenu = new Forms_Windows.logMenu();
+                logmenu.Closed += (s, args) => this.Show(); // When you close the new window, this one opens back up
+                logmenu.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("ERROR - Not High enough roles to load page", "No Role permission");
+            }
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
