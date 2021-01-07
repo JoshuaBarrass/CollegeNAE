@@ -103,6 +103,12 @@
     <Compile Include="Forms Windows\mainview.Designer.cs">
       <DependentUpon>mainview.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms Windows\NoticeBoardManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Windows\NoticeBoardManager.Designer.cs">
+      <DependentUpon>NoticeBoardManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seperate Scripts\LogEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +125,12 @@
     <Compile Include="UserControls\NoticeBoardItem.Designer.cs">
       <DependentUpon>NoticeBoardItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\NoticeBoardManageItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\NoticeBoardManageItem.Designer.cs">
+      <DependentUpon>NoticeBoardManageItem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms Windows\Create Account.resx">
       <DependentUpon>Create Account.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +146,9 @@
     <EmbeddedResource Include="Forms Windows\mainview.resx">
       <DependentUpon>mainview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Windows\NoticeBoardManager.resx">
+      <DependentUpon>NoticeBoardManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -144,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\NoticeBoardItem.resx">
       <DependentUpon>NoticeBoardItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\NoticeBoardManageItem.resx">
+      <DependentUpon>NoticeBoardManageItem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

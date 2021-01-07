@@ -9,15 +9,19 @@ namespace NEAapp
     static class Program
     {
 
-//             ::::    :::         :::        ::::::::::               :::        :::::::::     ::::::::: 
-//            :+:+:   :+:       :+: :+:      :+:                    :+: :+:      :+:    :+:    :+:    :+: 
-//           :+:+:+  +:+      +:+   +:+     +:+                   +:+   +:+     +:+    +:+    +:+    +:+  
-//          +#+ +:+ +#+     +#++:++#++:    +#++:++#             +#++:++#++:    +#++:++#+     +#++:++#+    
-//         +#+  +#+#+#     +#+     +#+    +#+                  +#+     +#+    +#+           +#+           
-//        #+#   #+#+#     #+#     #+#    #+#                  #+#     #+#    #+#           #+#            
-//       ###    ####     ###     ###    ##########           ###     ###    ###           ###    
+        //             ::::    :::   ::::::::::       ::::                ::::        :::::::::     ::::::::: 
+        //            :+:+:   :+:   :+:             :+: :+:             :+: :+:      :+:    :+:    :+:    :+: 
+        //           :+:+:+  +:+   +:+            +:+   +:+           +:+   +:+     +:+    +:+    +:+    +:+  
+        //          +#+ +:+ +#+   +#++:++#      +#++:++#++:         +#++:++#++:    +#++:++#+     +#++:++#+    
+        //         +#+  +#+#+#   +#+           +#+     +#+         +#+     +#+    +#+           +#+           
+        //        #+#   #+#+#   #+#           #+#     #+#         #+#     #+#    #+#           #+#            
+        //       ###    ####   ##########    ###     ###         ###     ###    ###           ###    
 
-        /* Version 1.0.13 - Log System Beginning
+        /*
+         * Version 1.0.14 - Made the NoticeBoardmanager Form
+         *        ^-----^ - Made New Usercontrol For ManageNoticeBoardItem
+         *        ^-----^ - Fixed Issue With Log System Menu
+         * Version 1.0.13 - Log System Beginning
          * Version 1.0.12 - Email system started and tested, can send an email from gmail account reliably
          * Version 1.0.11 - Made all classes currently needed for the Customer system and Project system to be put in place
          * Version 1.0.10 - made roles work with notice board
@@ -48,7 +52,7 @@ namespace NEAapp
         // Global variables visiable throught the whole program - used sparingly for only needed variables
         public static StaffProfile globalCurrentUser = new StaffProfile();
         public static string strDSN = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source = ..\..\Database\ProjectDatabase1.accdb"); //PLEASE DONT EVER TOUCH 
-        public static string UPDATE = "1.0.13";
+        public static string UPDATE = "1.0.14";
         internal static string Company = " Our Company";   // company name
         internal static string CompanyContactNumber = "07437758799"; // cmpoany number
 

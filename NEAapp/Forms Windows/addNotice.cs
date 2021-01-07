@@ -17,6 +17,7 @@ namespace NEAapp.Forms_Windows
         public addNotice()
         {
             InitializeComponent();
+            NameLabel.Text = Program.globalCurrentUser.getName() + " - " + Program.globalCurrentUser.getEmail();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -26,7 +27,7 @@ namespace NEAapp.Forms_Windows
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            CharacterLimitLabel.Text = $"{CharacterLimitLabel.Text.Count<char>().ToString()} / 1000 Characters";
+            CharacterLimitLabel.Text = $"{DescriptionTextBox.Text.Length.ToString()} / 1000 Characters";
         }
 
         private void addNoticeButton_Click(object sender, EventArgs e)

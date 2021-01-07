@@ -105,7 +105,6 @@ namespace NEAapp.Forms_Windows
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-            ClearNoticeBoard();
             UpdateNoticeBaord();
 
         }
@@ -124,12 +123,17 @@ namespace NEAapp.Forms_Windows
         {
 
             addNotice NewNotice = new addNotice();
+            NewNotice.Closed += (s, args) => this.ClearNoticeBoard(); // When you close the new window, this one opens back up
             NewNotice.Show();
-
+            
         }
+
+        
 
         private void ClearNoticeBoard()
         {
+            TrueNoticePanel.Controls.Clear();
+            UpdateNoticeBaord();
         }
 
         private void UpdateNoticeBaord()
@@ -208,6 +212,17 @@ namespace NEAapp.Forms_Windows
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Forms_Windows.NoticeBoardManager noticeMenu = new Forms_Windows.NoticeBoardManager();
+            noticeMenu.Closed += (s, args) => this.Show(); // When you close the new window, this one opens back up
+            noticeMenu.Closed += (s, args) => ClearNoticeBoard();
+            noticeMenu.Show();
+            this.Hide();
+
+            
         }
     }
 }

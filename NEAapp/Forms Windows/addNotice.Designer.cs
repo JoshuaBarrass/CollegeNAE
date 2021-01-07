@@ -97,7 +97,7 @@
             this.cancelNotice.Location = new System.Drawing.Point(224, 378);
             this.cancelNotice.Name = "cancelNotice";
             this.cancelNotice.Size = new System.Drawing.Size(169, 26);
-            this.cancelNotice.TabIndex = 6;
+            this.cancelNotice.TabIndex = 4;
             this.cancelNotice.Text = "Cancel";
             this.cancelNotice.UseVisualStyleBackColor = true;
             this.cancelNotice.Click += new System.EventHandler(this.cancelNotice_Click);
@@ -107,7 +107,7 @@
             this.addNoticeButton.Location = new System.Drawing.Point(21, 378);
             this.addNoticeButton.Name = "addNoticeButton";
             this.addNoticeButton.Size = new System.Drawing.Size(169, 26);
-            this.addNoticeButton.TabIndex = 5;
+            this.addNoticeButton.TabIndex = 3;
             this.addNoticeButton.Text = "Add Notice";
             this.addNoticeButton.UseVisualStyleBackColor = true;
             this.addNoticeButton.Click += new System.EventHandler(this.addNoticeButton_Click);
@@ -117,7 +117,7 @@
             this.TitleTextBox.Location = new System.Drawing.Point(19, 30);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.Size = new System.Drawing.Size(377, 20);
-            this.TitleTextBox.TabIndex = 4;
+            this.TitleTextBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -155,7 +155,7 @@
             this.DescriptionTextBox.MaxLength = 1000;
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(371, 268);
-            this.DescriptionTextBox.TabIndex = 0;
+            this.DescriptionTextBox.TabIndex = 2;
             this.DescriptionTextBox.Text = "";
             this.DescriptionTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 

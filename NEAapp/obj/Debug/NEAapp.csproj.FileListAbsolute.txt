@@ -31,3 +31,5 @@ E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.c
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.addNotice.resources
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.logMenu.resources
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.UserControls.Logitem.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.NoticeBoardManager.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.UserControls.NoticeBoardManageItem.resources
