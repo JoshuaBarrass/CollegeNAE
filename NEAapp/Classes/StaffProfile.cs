@@ -323,6 +323,16 @@ namespace NEAapp
             this.isMedicallyTrained = SET;
         }
 
+        public void setID(int id)
+        {
+            this.ValidId = id;
+        }
+
+        public int getID()
+        {
+            return this.ValidId;
+        }
+
         // hours user has worked in last the Last wekk
         public double hoursWorked()
         {

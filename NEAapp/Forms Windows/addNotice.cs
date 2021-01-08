@@ -47,6 +47,7 @@ namespace NEAapp.Forms_Windows
                 myComm.ExecuteNonQuery();
                 myConn.Close();
                 MessageBox.Show("NoticeBoard Message Added", "Notice Added");
+                LogEvent.AddNotice(Program.globalCurrentUser.getID(), Program.globalCurrentUser.getName(), DescriptionTextBox.Text);
                 this.Close();
             }
             else

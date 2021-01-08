@@ -46,6 +46,8 @@ namespace NEAapp.UserControls
 
             myConn.Close();
 
+            LogEvent.RemovedNotice(Program.globalCurrentUser.getID(), Program.globalCurrentUser.getName(), this.DescriptionLabel.Text);
+
             NoticeBoardManager main = (NoticeBoardManager)this.FindForm();
             main.refreshBoard();
 

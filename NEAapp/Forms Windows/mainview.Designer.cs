@@ -34,14 +34,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.ProjectPanelButton = new System.Windows.Forms.Button();
+            this.ManageNoticeButton = new System.Windows.Forms.Button();
+            this.GeneralAdminButton = new System.Windows.Forms.Button();
+            this.StaffLogsButton = new System.Windows.Forms.Button();
+            this.CustomerAccountsButton = new System.Windows.Forms.Button();
+            this.TestEmailButton = new System.Windows.Forms.Button();
+            this.StaffAccountsButton = new System.Windows.Forms.Button();
+            this.BillingButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -128,126 +128,127 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button22);
-            this.panel8.Controls.Add(this.button7);
-            this.panel8.Controls.Add(this.button3);
-            this.panel8.Controls.Add(this.button10);
-            this.panel8.Controls.Add(this.button19);
-            this.panel8.Controls.Add(this.button13);
-            this.panel8.Controls.Add(this.button2);
-            this.panel8.Controls.Add(this.button16);
+            this.panel8.Controls.Add(this.ProjectPanelButton);
+            this.panel8.Controls.Add(this.ManageNoticeButton);
+            this.panel8.Controls.Add(this.GeneralAdminButton);
+            this.panel8.Controls.Add(this.StaffLogsButton);
+            this.panel8.Controls.Add(this.CustomerAccountsButton);
+            this.panel8.Controls.Add(this.TestEmailButton);
+            this.panel8.Controls.Add(this.StaffAccountsButton);
+            this.panel8.Controls.Add(this.BillingButton);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 62);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(331, 692);
             this.panel8.TabIndex = 23;
             // 
-            // button22
+            // ProjectPanelButton
             // 
-            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.button22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button22.Location = new System.Drawing.Point(0, 616);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(331, 88);
-            this.button22.TabIndex = 19;
-            this.button22.Text = "Projects Panel";
-            this.button22.UseVisualStyleBackColor = false;
+            this.ProjectPanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.ProjectPanelButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProjectPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectPanelButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ProjectPanelButton.Location = new System.Drawing.Point(0, 616);
+            this.ProjectPanelButton.Name = "ProjectPanelButton";
+            this.ProjectPanelButton.Size = new System.Drawing.Size(331, 88);
+            this.ProjectPanelButton.TabIndex = 19;
+            this.ProjectPanelButton.Text = "Projects Panel";
+            this.ProjectPanelButton.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // ManageNoticeButton
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Location = new System.Drawing.Point(0, 528);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(331, 88);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Manage Noticeboard";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.ManageNoticeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.ManageNoticeButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ManageNoticeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageNoticeButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ManageNoticeButton.Location = new System.Drawing.Point(0, 528);
+            this.ManageNoticeButton.Name = "ManageNoticeButton";
+            this.ManageNoticeButton.Size = new System.Drawing.Size(331, 88);
+            this.ManageNoticeButton.TabIndex = 4;
+            this.ManageNoticeButton.Text = "Manage Noticeboard";
+            this.ManageNoticeButton.UseVisualStyleBackColor = false;
+            this.ManageNoticeButton.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button3
+            // GeneralAdminButton
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(0, 440);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(331, 88);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "General Admin";
-            this.button3.UseVisualStyleBackColor = false;
+            this.GeneralAdminButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.GeneralAdminButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GeneralAdminButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GeneralAdminButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.GeneralAdminButton.Location = new System.Drawing.Point(0, 440);
+            this.GeneralAdminButton.Name = "GeneralAdminButton";
+            this.GeneralAdminButton.Size = new System.Drawing.Size(331, 88);
+            this.GeneralAdminButton.TabIndex = 20;
+            this.GeneralAdminButton.Text = "General Admin";
+            this.GeneralAdminButton.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // StaffLogsButton
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button10.Location = new System.Drawing.Point(0, 352);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(331, 88);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Staff Logs";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.StaffLogsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.StaffLogsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StaffLogsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StaffLogsButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.StaffLogsButton.Location = new System.Drawing.Point(0, 352);
+            this.StaffLogsButton.Name = "StaffLogsButton";
+            this.StaffLogsButton.Size = new System.Drawing.Size(331, 88);
+            this.StaffLogsButton.TabIndex = 7;
+            this.StaffLogsButton.Text = "Staff Logs";
+            this.StaffLogsButton.UseVisualStyleBackColor = false;
+            this.StaffLogsButton.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button19
+            // CustomerAccountsButton
             // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button19.Location = new System.Drawing.Point(0, 264);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(331, 88);
-            this.button19.TabIndex = 16;
-            this.button19.Text = "Customer Accounts";
-            this.button19.UseVisualStyleBackColor = false;
+            this.CustomerAccountsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.CustomerAccountsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CustomerAccountsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CustomerAccountsButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.CustomerAccountsButton.Location = new System.Drawing.Point(0, 264);
+            this.CustomerAccountsButton.Name = "CustomerAccountsButton";
+            this.CustomerAccountsButton.Size = new System.Drawing.Size(331, 88);
+            this.CustomerAccountsButton.TabIndex = 16;
+            this.CustomerAccountsButton.Text = "Customer Accounts";
+            this.CustomerAccountsButton.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // TestEmailButton
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button13.Location = new System.Drawing.Point(0, 176);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(331, 88);
-            this.button13.TabIndex = 10;
-            this.button13.Text = "Test Email Button";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.TestEmailButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.TestEmailButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TestEmailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestEmailButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TestEmailButton.Location = new System.Drawing.Point(0, 176);
+            this.TestEmailButton.Name = "TestEmailButton";
+            this.TestEmailButton.Size = new System.Drawing.Size(331, 88);
+            this.TestEmailButton.TabIndex = 10;
+            this.TestEmailButton.Text = "Test Email Button";
+            this.TestEmailButton.UseVisualStyleBackColor = false;
+            this.TestEmailButton.Click += new System.EventHandler(this.button13_Click);
             // 
-            // button2
+            // StaffAccountsButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(0, 88);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(331, 88);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Staff Accounts";
-            this.button2.UseVisualStyleBackColor = false;
+            this.StaffAccountsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.StaffAccountsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StaffAccountsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StaffAccountsButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.StaffAccountsButton.Location = new System.Drawing.Point(0, 88);
+            this.StaffAccountsButton.Name = "StaffAccountsButton";
+            this.StaffAccountsButton.Size = new System.Drawing.Size(331, 88);
+            this.StaffAccountsButton.TabIndex = 1;
+            this.StaffAccountsButton.Text = "Staff Accounts";
+            this.StaffAccountsButton.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // BillingButton
             // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button16.Location = new System.Drawing.Point(0, 0);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(331, 88);
-            this.button16.TabIndex = 13;
-            this.button16.Text = "Billing";
-            this.button16.UseVisualStyleBackColor = false;
+            this.BillingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.BillingButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BillingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BillingButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BillingButton.Location = new System.Drawing.Point(0, 0);
+            this.BillingButton.Name = "BillingButton";
+            this.BillingButton.Size = new System.Drawing.Size(331, 88);
+            this.BillingButton.TabIndex = 13;
+            this.BillingButton.Text = "Billing";
+            this.BillingButton.UseVisualStyleBackColor = false;
+            this.BillingButton.Click += new System.EventHandler(this.button16_Click);
             // 
             // label3
             // 
@@ -412,14 +413,14 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ProjectPanelButton;
+        private System.Windows.Forms.Button CustomerAccountsButton;
+        private System.Windows.Forms.Button BillingButton;
+        private System.Windows.Forms.Button TestEmailButton;
+        private System.Windows.Forms.Button StaffLogsButton;
+        private System.Windows.Forms.Button ManageNoticeButton;
+        private System.Windows.Forms.Button StaffAccountsButton;
+        private System.Windows.Forms.Button GeneralAdminButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel ProjectPanel;
         private System.Windows.Forms.Panel panel6;

@@ -21,10 +21,39 @@ namespace NEAapp.Forms_Windows
 
             LoadStaffAccount(id);
 
-            //Get Roles
-
-
             //Update valid UI
+            //Update Buttons To Show if Valid Roles to Buttons
+            var User = Program.globalCurrentUser;
+            var Useradmin = User.checkAdmin();
+            if (!Useradmin && !User.checkRole(roleTypes.ACCOUNTANT) && !User.checkRole(roleTypes.INVOICEACCESS))
+            {
+                BillingButton.Hide();
+            }
+            
+            if(!Useradmin && !User.checkRole(roleTypes.MANAGER) && !User.checkRole(roleTypes.ACCOUNTANT) && !User.checkRole(roleTypes.INVOICEACCESS))
+            {
+                CustomerAccountsButton.Hide();
+            }
+
+            if (!Useradmin && !User.checkRole(roleTypes.NOTICEBOARDACCESS))
+            {
+                ManageNoticeButton.Hide();
+                button1.Hide();
+            }
+
+            if (!Useradmin && !User.checkRole(roleTypes.PROJECTSACCESS))
+            {
+                ProjectPanelButton.Hide();
+            }
+
+            if (!Useradmin)
+            {
+                StaffAccountsButton.Hide();
+                GeneralAdminButton.Hide();
+                TestEmailButton.Hide();
+                StaffLogsButton.Hide();
+            }
+
 
             NameLabel.Text = Program.globalCurrentUser.getName() + " - " + Program.globalCurrentUser.getEmail();
 
@@ -74,6 +103,7 @@ namespace NEAapp.Forms_Windows
                 }
 
                 Program.globalCurrentUser.InitProfile(staffName, DOB, WorkedSince, admin, contract, wage, email, contactDetails, EmergencyContact, isMedicallyTrained, intRoles);
+                Program.globalCurrentUser.setID(id);
                 // Sets Global user to currently Logged in user
 
 
@@ -223,6 +253,11 @@ namespace NEAapp.Forms_Windows
             this.Hide();
 
             
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
