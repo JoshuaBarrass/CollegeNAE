@@ -121,7 +121,7 @@ namespace NEAapp.Forms_Windows
                 }
                 */
 
-            }
+            }   //Sets up global variable for Current User
             else
             {
                 MessageBox.Show("Error: Account Not Found", "Account Missing");
@@ -135,7 +135,7 @@ namespace NEAapp.Forms_Windows
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-            UpdateNoticeBaord();
+            UpdateNoticeBaord(); // On load, update noticeboard
 
         }
 
@@ -162,11 +162,11 @@ namespace NEAapp.Forms_Windows
 
         private void ClearNoticeBoard()
         {
-            TrueNoticePanel.Controls.Clear();
+            TrueNoticePanel.Controls.Clear();       // void would be better named updateNoticeBoard
             UpdateNoticeBaord();
         }
 
-        private void UpdateNoticeBaord()
+        private void UpdateNoticeBaord()            // but it already exists here sooo 
         {
             //get all notiveboarditems from sql
             string strQRY = ($"SELECT * from NoticeBoardTable");   // Our query
@@ -185,10 +185,10 @@ namespace NEAapp.Forms_Windows
                     while (r.Read())
                     {
                         var user = r[1];
-                        var title = r[2];
+                        var title = r[2];    // r[i] refers to row in sql table read as r
                         var info = r[3];
                         var date = r[4];
-                        var newNotice = new NoticeBoardItem(title.ToString(), user.ToString(), info.ToString(), DateTime.Parse(date.ToString()));
+                        var newNotice = new NoticeBoardItem(title.ToString(), user.ToString(), info.ToString(), DateTime.Parse(date.ToString()));//Sets up item 
                         newNotice.AutoSize = true;
                         newNotice.Visible = true;
                         newNotice.Parent = TrueNoticePanel;
@@ -221,12 +221,12 @@ namespace NEAapp.Forms_Windows
         private void button13_Click(object sender, EventArgs e)
         {
             Customer testCustomer = new Customer("Nax", "NAX", "Josh - 07437758799", "None", "joshuabarrass010203@gmail.com");
-            testCustomer.bumpEmailUnpaidInvoices();
+            testCustomer.bumpEmailUnpaidInvoices();    // For testing email functionality and Customer Classes
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (Program.globalCurrentUser.checkAdmin() || Program.globalCurrentUser.checkRole(roleTypes.SUPERVISOR))
+            if (Program.globalCurrentUser.checkAdmin() || Program.globalCurrentUser.checkRole(roleTypes.SUPERVISOR)) // Role Checks
             {
                 Forms_Windows.logMenu logmenu = new Forms_Windows.logMenu();
                 logmenu.Closed += (s, args) => this.Show(); // When you close the new window, this one opens back up
@@ -258,6 +258,15 @@ namespace NEAapp.Forms_Windows
         private void button16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void StaffAccountsButton_Click(object sender, EventArgs e)
+        {
+            Forms_Windows.StaffAccountManager staffmenu = new Forms_Windows.StaffAccountManager();
+            staffmenu.Closed += (s, args) => this.Show(); // When you close the new window, this one opens back up
+            staffmenu.Closed += (s, args) => ClearNoticeBoard();
+            staffmenu.Show();
+            this.Hide();
         }
     }
 }

@@ -33,3 +33,6 @@ E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.F
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.UserControls.Logitem.resources
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.NoticeBoardManager.resources
 E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.UserControls.NoticeBoardManageItem.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.StaffAccountManager.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.Forms_Windows.StaffOverview.resources
+E:\College Work\Computer science\year 2\NEA\CollegeNAE\NEAapp\obj\Debug\NEAapp.UserControls.StaffItem.resources

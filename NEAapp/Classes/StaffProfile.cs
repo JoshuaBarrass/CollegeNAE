@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace NEAapp
 {
-    class StaffProfile
+    public class StaffProfile
     {
 
         private int ValidId; // ID link in SQL TABLE
@@ -192,6 +192,12 @@ namespace NEAapp
                 this.aquiredRoles.Find(aRole => aRole.getRole() == role));
             return true;
         }
+
+        public List<Roles> getRoles()
+        {
+            return this.aquiredRoles;
+        }
+
 
         // Admin role
         public bool checkAdmin()

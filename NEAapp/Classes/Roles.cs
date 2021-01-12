@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace NEAapp.Classes
 {
 
-    enum roleTypes : int
+    public enum roleTypes : int
     {
         GENERALSTAFF = 0,
         ENGINEER,
@@ -24,7 +24,7 @@ namespace NEAapp.Classes
 
 
 
-    class Roles
+    public class Roles
     {
         private roleTypes role;
         private int roleLevel;

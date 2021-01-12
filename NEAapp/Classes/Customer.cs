@@ -35,6 +35,15 @@ namespace NEAapp.Classes
 
         } //Empty Constructor so i can do it in a later void 
 
+        public void init(string Name, string TLC, string keyCon, string techCon, string CompanyEmail)
+        {
+            this.CompanyName = Name;
+            this.keyContacts = keyCon;
+            this.TechnicalContacts = techCon;
+            this.threeLetterCode = TLC;
+            this.CompanyEmail = CompanyEmail;
+        }
+
         public void AddSite(string Name, string Address, bool MainSite, string internet, string phone, string printers)
         {
             this.companySites.Add(new Site(Name, Address, MainSite, internet, phone, printers));

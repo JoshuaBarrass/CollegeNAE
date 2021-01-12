@@ -237,7 +237,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Name = "logMenu";
-            this.Text = "logMenu";
+            this.Text = "Log System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

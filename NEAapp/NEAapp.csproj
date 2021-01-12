@@ -109,6 +109,18 @@
     <Compile Include="Forms Windows\NoticeBoardManager.Designer.cs">
       <DependentUpon>NoticeBoardManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms Windows\StaffAccountManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Windows\StaffAccountManager.Designer.cs">
+      <DependentUpon>StaffAccountManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms Windows\StaffOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms Windows\StaffOverview.Designer.cs">
+      <DependentUpon>StaffOverview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seperate Scripts\LogEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,6 +143,12 @@
     <Compile Include="UserControls\NoticeBoardManageItem.Designer.cs">
       <DependentUpon>NoticeBoardManageItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\StaffItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\StaffItem.Designer.cs">
+      <DependentUpon>StaffItem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms Windows\Create Account.resx">
       <DependentUpon>Create Account.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +167,12 @@
     <EmbeddedResource Include="Forms Windows\NoticeBoardManager.resx">
       <DependentUpon>NoticeBoardManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms Windows\StaffAccountManager.resx">
+      <DependentUpon>StaffAccountManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms Windows\StaffOverview.resx">
+      <DependentUpon>StaffOverview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -162,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\NoticeBoardManageItem.resx">
       <DependentUpon>NoticeBoardManageItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\StaffItem.resx">
+      <DependentUpon>StaffItem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

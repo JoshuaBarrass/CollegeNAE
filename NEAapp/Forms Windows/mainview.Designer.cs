@@ -235,6 +235,7 @@
             this.StaffAccountsButton.TabIndex = 1;
             this.StaffAccountsButton.Text = "Staff Accounts";
             this.StaffAccountsButton.UseVisualStyleBackColor = false;
+            this.StaffAccountsButton.Click += new System.EventHandler(this.StaffAccountsButton_Click);
             // 
             // BillingButton
             // 
@@ -381,7 +382,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.leftPanel);
             this.Name = "MainMenu";
-            this.Text = "MainMenu";
+            this.Text = "Main Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.NoticeBoardPanel.ResumeLayout(false);
